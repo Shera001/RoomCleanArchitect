@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">RoomWithMVVM</string>
+    <string name="add_user">Add User</string>
+    <string name="user_name">User Name</string>
+    <string name="phone">Phone</string>
+    <string name="add">Add</string>
+    <string name="users">Users</string>
+    <string name="favorite">Favorite</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="image_of_favorite">Image of favorite</string>
+</resources>
