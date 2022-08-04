@@ -1,30 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F1F1F1"
+    android:orientation="vertical"
     tools:context=".presentation.main.MainFragment">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/mainTab"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_tab_layout"
+        android:elevation="8dp"
+        android:paddingHorizontal="24dp" />
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/mainTab"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_tab_layout"
-            android:paddingHorizontal="24dp" />
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/mainViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/mainViewPager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <include layout="@layout/dialog_add_user" />
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

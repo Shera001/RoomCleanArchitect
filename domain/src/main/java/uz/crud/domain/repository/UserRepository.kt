@@ -1,5 +1,6 @@
 package uz.crud.domain.repository
 
+import kotlinx.coroutines.flow.Flow
 import uz.crud.domain.model.User
 
 interface UserRepository {
@@ -12,7 +13,5 @@ interface UserRepository {
 
     suspend fun deleteAllUsers()
 
-    suspend fun getUsers(): List<User>
-
-    suspend fun getFavoriteUsers(): List<User>
+    suspend fun getUsers(): Flow<List<User>>
 }

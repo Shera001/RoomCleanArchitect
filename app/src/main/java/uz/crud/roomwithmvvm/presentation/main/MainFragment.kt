@@ -30,7 +30,10 @@ class MainFragment : Fragment() {
     }
 
     private fun initView() {
-        binding.mainViewPager.adapter = MainPagerAdapter(fragment = this)
+        binding.mainViewPager.apply {
+            isUserInputEnabled = false
+            adapter = MainPagerAdapter(fragment = this@MainFragment)
+        }
         TabLayoutMediator(
             binding.mainTab, binding.mainViewPager
         ) { tab, position ->

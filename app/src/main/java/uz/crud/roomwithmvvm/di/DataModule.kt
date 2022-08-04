@@ -1,24 +1,24 @@
 package uz.crud.roomwithmvvm.di
 
-import android.content.Context
+import android.app.Application
 import androidx.room.Room
 import dagger.Module
 import dagger.Provides
 import uz.crud.data.db.AppDatabase
 import uz.crud.data.db.dao.UserDao
-import javax.inject.Singleton
 
 @Module
 class DataModule {
 
     @Provides
-    fun provideAppDatabase(context: Context): AppDatabase {
+    fun provideAppDatabase(application: Application): AppDatabase {
         return Room.databaseBuilder(
-            context,
+            application,
             AppDatabase::class.java,
             AppDatabase.DATABASE_NAME
-        ).allowMainThreadQueries()
+        )
             .fallbackToDestructiveMigration()
+            .allowMainThreadQueries()
             .build()
     }
 

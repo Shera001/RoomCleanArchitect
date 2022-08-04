@@ -9,4 +9,11 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="image_of_favorite">Image of favorite</string>
+    <string name="image_of_up">Image of up</string>
+
+    <string name="empty_name">Name is empty</string>
+    <string name="empty_number">Number is empty</string>
+    <string name="empty_message" />
+    <string name="edit">Edit</string>
+    <string name="done">Done</string>
 </resources>

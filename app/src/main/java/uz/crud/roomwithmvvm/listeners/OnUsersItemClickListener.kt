@@ -1,6 +1,8 @@
 package uz.crud.roomwithmvvm.listeners
 
-interface OnUsersItemClickListener {
+import uz.crud.domain.model.User
 
-    fun onUsersItemClick(position: Int)
+interface OnUsersItemClickListener {
+    fun onUsersItemClick(item: User)
+    fun onFavoriteClick(item: User)
 }

@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import uz.crud.domain.model.User
+import uz.crud.roomwithmvvm.R
 import uz.crud.roomwithmvvm.databinding.ItemUserBinding
 import uz.crud.roomwithmvvm.listeners.OnUsersItemClickListener
 
@@ -26,8 +27,22 @@ class UserAdapter(
             binding.apply {
                 nameTv.text = item.name
                 phoneTv.text = item.phone
+                if (item.isFavorite) {
+                    favoriteIv.setImageResource(R.drawable.ic_favorite)
+                } else {
+                    favoriteIv.setImageResource(R.drawable.ic_favorite_border)
+                }
                 root.setOnClickListener {
-                    listener.onUsersItemClick(adapterPosition)
+                    listener.onUsersItemClick(item)
+                }
+                favoriteIv.setOnClickListener {
+                    if (item.isFavorite) {
+                        favoriteIv.setImageResource(R.drawable.ic_favorite_border)
+                    } else {
+                        favoriteIv.setImageResource(R.drawable.ic_favorite)
+                    }
+
+                    listener.onFavoriteClick(item)
                 }
             }
         }

@@ -1,9 +1,10 @@
-package uz.crud.roomwithmvvm.presentation.main
+package uz.crud.roomwithmvvm.presentation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import uz.crud.roomwithmvvm.R
 import uz.crud.roomwithmvvm.databinding.ActivityMainBinding
+import uz.crud.roomwithmvvm.presentation.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
 
